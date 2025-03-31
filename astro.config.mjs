@@ -9,4 +9,9 @@ export default defineConfig({
   adapter: cloudflare({
     platformProxy: { enabled: true },
   }),
+  vite: {
+    ssr: {
+      external: ["cloudflare:workers"],
+    },
+  },
 });
